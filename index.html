@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chairs</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <section class="catalog">
+        <div class="catalog__wrapper wrapper">
+            <div class="store-mobile js-store-mobile active">Корзина(<span
+                    class="store-mobile__quantity js-mobile-quantity">0</span>)</div>
+            <div class="controls">
+                <div class="sort">
+                    <span class="sort__title">Сортировать по:</span>
+                    <span class="sort__wrapper">
+                        <button class="js-sort-by-name sort__button">Имя</button>
+                        <button class="js-sort-by-price sort__button">Цена</button>
+                    </span>
+                </div>
+                <div class="filter">
+                    <span class="filter__choosen-item js-dropdown-button">Все</span>
+                    <ul class="filter__dropdown">
+                        <li class="filter__dropdown-item js-dropdown-select" filter-data="all">Все</li>
+                        <li class="filter__dropdown-item js-dropdown-select" filter-data="unavailable">Нет в наличии
+                        </li>
+                        <li class="filter__dropdown-item js-dropdown-select" filter-data="available">Есть в наличии</li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="product" id="js-product"></ul>
+            <div class="store">
+                <button class="store__button--close store-item__button js-store-close">
+                </button>
+                <div class="store__wrapper">
+                    <ul class="store__container" id="js-store-container"></ul>
+                    <div class="store__info">
+                        <span class="store__total">Итог</span><span class="store__price price js-total-sum">0
+                            рублей</span>
+                    </div>
+                    <button class="button js-buy-button button--active">Заказать</button>
+                </div>
+            </div>
+            <div class="pagination pagination-active" id="pagination">
+                <button class="pagination__button pagination__button--controls pagination__button--prev"
+                    onclick="Pagination.moveBackward()"></button>
+                <div class="pagination__list" id="pagination__list">
+                </div>
+                <button class="pagination__button pagination__button--controls pagination__button--next"
+                    onclick="Pagination.moveForward()"></button>
+            </div>
+        </div>
+    </section>
+    <script src="js/Database.js"></script>
+    <script src="js/Card.js"></script>
+    <script src="js/Pagination.js"></script>
+    <script src="js/Filter.js"></script>
+    <script src="js/Store.js"></script>
+    <script src="js/Sort.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
